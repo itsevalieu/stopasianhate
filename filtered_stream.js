@@ -1,10 +1,12 @@
 // Open a realtime stream of Tweets, filtered according to rules
 // https://developer.twitter.com/en/docs/twitter-api/tweets/filtered-stream/quick-start
-
+import * as fs from 'fs';
 import needle from 'needle';
 import dotenv from 'dotenv';
 
 const { get } = needle;
+
+const file = fs.createWriteStream(`./data/stopasianhate.json`, { flags: 'a' });
 
 dotenv.config();
 // The code below sets the bearer token from your environment variables
@@ -157,5 +159,5 @@ function streamConnect(retryAttempt) {
     }
 
     // Listen to the stream.
-    streamConnect(0);
+    streamConnect(0).pipe(file);
 })();
