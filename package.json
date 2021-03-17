@@ -1,0 +1,43 @@
+{
+    "name": "stopasianhate",
+    "version": "1.0.0",
+    "description": "Collecting data on the #stopasianhate, and other related hashtags. Eventually would love to expand to other movements like #blacklivesmatter, immigration, etc.",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "filter": "node filtered_stream.js",
+        "start": "nodemon index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/itsevalieu/stopasianhate.git"
+    },
+    "keywords": [
+        "stopasianhate"
+    ],
+    "author": "itsevalieu@gmail.com",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/itsevalieu/stopasianhate/issues"
+    },
+    "homepage": "https://github.com/itsevalieu/stopasianhate#readme",
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "needle": "^2.6.0"
+    },
+    "devDependencies": {
+        "eslint": "^7.2.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-config-node": "^4.1.0",
+        "eslint-config-prettier": "^8.1.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-prettier": "^3.3.1",
+        "eslint-plugin-react": "^7.21.5",
+        "eslint-plugin-react-hooks": "^1.7.0",
+        "prettier": "^2.2.1"
+    }
+}
